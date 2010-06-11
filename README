@@ -1,0 +1,22 @@
+The aim is to create a program in C that reads from stdin and writes back to stdout replacing
+every odd numbered ' with `. One naive solution follows:
+
+#include <stdio.h>
+
+int main(void) {
+	char c;
+	int i = 0;
+	while ((c = getchar()) != EOF) {
+		if (c == '\'') {
+			if (i % 2 == 0)
+				putchar('`');
+			else
+				putchar('\'');
+			i++;
+		} else
+			putchar(c);
+	}
+	return 0;
+}
+
+Now, the fun begins when you try and do it using the least number of characters...
