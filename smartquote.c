@@ -1,1 +1,1 @@
-main(c,v){while(~(v=getchar()))putchar(v-39||++c%2?v:96);}
+main(c,v){while(read(0,&c,1))putchar(c-39||v++%2?c:96);}
